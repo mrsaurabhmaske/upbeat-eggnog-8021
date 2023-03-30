@@ -13,7 +13,6 @@
         body{
             margin:0px;
             padding:0px;
-            background-color:rgb(235, 232, 232) ;
         }
         .searchbar{
             display: none;
@@ -64,6 +63,10 @@
         #nav2 >div{
             font-size: 12px;
         }
+        #nav2>div:hover{
+            border: 1px solid white;
+            transition: all 0.5s;
+        }
         .subnav{
             background-color: red;
         }
@@ -82,7 +85,7 @@
             grid-template-columns: repeat(3,1fr);
             gap: 10px;
             position: absolute;
-            transition: ease-in;
+            transition: all 2s;
         }
         .subnav-content>a{
             text-decoration: none;
@@ -104,10 +107,11 @@
         .toggle{
             margin-top: 5px;
             margin-bottom: 20px;
+            margin-left: 100px;
             padding-left: 20px;
         }
         .toggle>button{
-            background-color: rgb(235, 232, 232);
+            background-color: transparent;
             border: 0px solid;
         }
         a{
@@ -146,6 +150,38 @@
         }
         .slideShow img{
             width:50%;
+        }
+        .products{
+            width:1000px;
+            margin:auto;
+            margin-top: 10px;
+            display: grid;
+            grid-template-columns: repeat(3,1fr);
+            gap:15px;
+        }
+        .products>div{
+            background-color: white;
+            padding: 5px;
+            box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+            border-radius: 3px;
+        }.products>div>h3{
+            font-weight: normal;
+        }
+        .products>div>img{
+            width:100%;
+        }
+        .products>div>div{
+            display:flex;
+            align-items: center;
+            padding-left: 10px;
+        }
+        .products>div>div>img{
+            width:30px;
+            height: 30px;
+            border-radius: 20px;
+        }
+        .products>div>div>p{
+            padding-left: 10px;
         }
     </style>
 </head>
@@ -272,17 +308,27 @@
     <!-- Slideshow -->
 
     <div class="slideShow">
-        <img src="https://img1.junaroad.com//assets/images/mobileNotif/img-1678875016329.jpg?crsl_pos=0" alt="">
+        <img src="https://img1.junaroad.com//assets/images/mobileNotif/img-1678466728484.jpg?crsl_pos=0" alt="">
         <img src="https://img1.junaroad.com//assets/images/mobileNotif/img-1679592536138.jpg?crsl_pos=0" alt="">
     </div>
 
     <!-- -------------------------------------------- -->
+
+    <!-- Products for Women Homepage -------------------->
+
+    <div class="products"><!-- Products will be pushed here--></div>
+
+    <!-- -------------------------------------------------- -->
 </body>
 </html>
+
+<!------------------------Javascript starts here-------------------------- -->
+
 <script>
     // Related to slideshow----------------------------------------
     slideImages=[
                 "https://img1.junaroad.com//assets/images/mobileNotif/img-1679592536138.jpg?crsl_pos=0",
+                "https://img1.junaroad.com//assets/images/mobileNotif/img-1678466728484.jpg?crsl_pos=0",
                 "https://img1.junaroad.com//assets/images/mobileNotif/img-1667388470485.jpg?crsl_pos=0",
                 "https://img1.junaroad.com//assets/images/mobileNotif/img-1673614465338.jpg?crsl_pos=0",
                 "https://img0.junaroad.com/images/banners/B2G1_13january2023_1673587401792.jpg?crsl_pos=0",
@@ -300,11 +346,11 @@
         slideImage1.setAttribute("src",slideImages[slidecounter]); 
         slideImage2.setAttribute("src", slideImages[slidecounter+1]);
         document.style.transition="all 2s"
-    }, 3000);
+    }, 4000);
     //-------------------------------------------------------------
 
-    //Related to Items---------------------------------------------
-    Products=[
+    //Related to Products/ Items---------------------------------------------
+    Products = [
         {
             title:"#HOTTESTOFTHESEASON",
             image:"https://img0.junaroad.com/stories/story_p_641c3ab6cc8b5e65a7ca12d8-1679823159.jpeg",
@@ -320,126 +366,123 @@
         {
             title: "COUNTING ON #THE MIDNIGHT",
             image: "https://img2.junaroad.com/stories/story_p_6416d76bf38057081c082896-1679980823.jpeg",
+            seller: "By Pallavi",
+            sellerimg: "https://img0.junaroad.com/user_profile/26.jpg"
+        },
+        {
+            title: "YOU'RE DOING IT RIGHT",
+            image: "https://img0.junaroad.com/stories/story_p_641060cfb388b0083538b0f9-1678875193.jpeg",
+            seller: "By Shivangini",
+            sellerimg: "https://img1.junaroad.com/user_profile/32.jpg"
+        },
+        {
+            title: "#HOTTESTOFTHESEASON",
+            image: "https://img1.junaroad.com/stories/story_p_641483b9cc8b5e082a32d050-1679135097.jpeg",
+            seller: "By Pallavi",
+            sellerimg: "https://img0.junaroad.com/user_profile/26.jpg"
+        },
+        {
+            title: "BAG THESE DRESSES",
+            image: "https://img3.junaroad.com/stories/story_p_641189ecf47b70081995ba42-1679198847.jpeg",
+            seller: "By Pallavi",
+            sellerimg: "https://img0.junaroad.com/user_profile/26.jpg"
+        },
+        {
+            title: "COUNTING ON #THE MIDNIGHT",
+            image: "https://img0.junaroad.com/stories/story_p_641060cfb388b0083538b0f9-1678875193.jpeg",
             seller: "By Shivangini",
             sellerimg: "https://img1.junaroad.com/user_profile/32.jpg"
         },
         {
             title: "YOU'RE DOING IT RIGHT",
-            image: "https://img0.junaroad.com/stories/story_p_641483b9cc8b5e082a32d050-1679135097.jpeg",
+            image: "https://img2.junaroad.com/stories/story_p_641198a3b388b008214a0665-1678875370.jpeg",
             seller: "By Shivangini",
             sellerimg: "https://img1.junaroad.com/user_profile/32.jpg"
         },
         {
-            title: "",
-            image: "",
-            seller: "",
-            sellerimg: ""
+            title: "#HOTTESTOFTHESEASON",
+            image: "https://img1.junaroad.com/stories/story_p_641483b9cc8b5e082a32d050-1679135097.jpeg",
+            seller: "By Shivangini",
+            sellerimg: "https://img1.junaroad.com/user_profile/32.jpg"
         },
         {
-            title: "",
-            image: "",
-            seller: "",
-            sellerimg: ""
+            title: "#HOTTESTOFTHESEASON",
+            image: "https://img0.junaroad.com/stories/story_p_641c3ab6cc8b5e65a7ca12d8-1679823159.jpeg",
+            seller: "By Pallavi",
+            sellerimg: "https://img0.junaroad.com/user_profile/26.jpg"
         },
         {
-            title: "",
-            image: "",
-            seller: "",
-            sellerimg: ""
+            title: "BAG THESE DRESSES",
+            image: "https://img2.junaroad.com/stories/story_p_6413011af47b70081f405cc9-1679545563.jpeg",
+            seller: "By Shivangini",
+            sellerimg: "https://img1.junaroad.com/user_profile/32.jpg"
         },
         {
-            title: "",
-            image: "",
-            seller: "",
-            sellerimg: ""
+            title: "COUNTING ON #THE MIDNIGHT",
+            image: "https://img0.junaroad.com/stories/story_p_640b0ba9cc8b5e082bb28f0b-1679417879.jpeg",
+            seller: "By Pallavi",
+            sellerimg: "https://img0.junaroad.com/user_profile/26.jpg"
         },
         {
-            title: "",
-            image: "",
-            seller: "",
-            sellerimg: ""
+            title: "YOU'RE DOING IT RIGHT",
+            image: "https://img0.junaroad.com/stories/story_p_641060cfb388b0083538b0f9-1678875193.jpeg",
+            seller: "By Shivangini",
+            sellerimg: "https://img1.junaroad.com/user_profile/32.jpg"
         },
         {
-            title: "",
-            image: "",
-            seller: "",
-            sellerimg: ""
+            title: "#HOTTESTOFTHESEASON",
+            image: "https://img1.junaroad.com/stories/story_p_641483b9cc8b5e082a32d050-1679135097.jpeg",
+            seller: "By Shivangini",
+            sellerimg: "https://img1.junaroad.com/user_profile/32.jpg"
         },
         {
-            title: "",
-            image: "",
-            seller: "",
-            sellerimg: ""
+            title: "BAG THESE DRESSES",
+            image: "https://img3.junaroad.com/stories/story_p_641189ecf47b70081995ba42-1679198847.jpeg",
+            seller: "By Shivangini",
+            sellerimg: "https://img1.junaroad.com/user_profile/32.jpg"
         },
         {
-            title: "",
-            image: "",
-            seller: "",
-            sellerimg: ""
+            title: "COUNTING ON #THE MIDNIGHT",
+            image: "https://img0.junaroad.com/stories/story_p_640b0ba9cc8b5e082bb28f0b-1679417879.jpeg",
+            seller: "By Pallavi",
+            sellerimg: "https://img0.junaroad.com/user_profile/26.jpg"
         },
         {
-            title: "",
-            image: "",
-            seller: "",
-            sellerimg: ""
+            title: "YOU'RE DOING IT RIGHT",
+            image: "https://img2.junaroad.com/stories/story_p_641198a3b388b008214a0665-1678875370.jpeg",
+            seller: "By Shivangini",
+            sellerimg: "https://img1.junaroad.com/user_profile/32.jpg"
         },
         {
-            title: "",
-            image: "",
-            seller: "",
-            sellerimg: ""
-        },
-        {
-            title: "",
-            image: "",
-            seller: "",
-            sellerimg: ""
-        },
-        {
-            title: "",
-            image: "",
-            seller: "",
-            sellerimg: ""
-        },
-        {
-            title: "",
-            image: "",
-            seller: "",
-            sellerimg: ""
-        },
-        {
-            title: "",
-            image: "",
-            seller: "",
-            sellerimg: ""
-        },
-        {
-            title: "",
-            image: "",
-            seller: "",
-            sellerimg: ""
-        },
-        {
-            title: "",
-            image: "",
-            seller: "",
-            sellerimg: ""
-        },
-        {
-            title: "",
-            image: "",
-            seller: "",
-            sellerimg: ""
-        },
-        {
-            title: "",
-            image: "",
-            seller: "",
-            sellerimg: ""
+            title: "#HOTTESTOFTHESEASON",
+            image: "https://img1.junaroad.com/stories/story_p_641483b9cc8b5e082a32d050-1679135097.jpeg",
+            seller: "By Pallavi",
+            sellerimg: "https://img0.junaroad.com/user_profile/26.jpg"
         }
     ]
 
+  
+    let productContainer=document.querySelector(".products");
 
+        for(let i=0;i<Products.length;i++){
+            let product = document.createElement("div")
+                let title = document.createElement("h3");
+                let productImage = document.createElement("img");
+                let seller = document.createElement("div");
+                    let sellerimg=document.createElement("img");
+                    let sellerName= document.createElement("p");
+
+                    sellerimg.setAttribute("src",Products[i].sellerimg);
+                    sellerName.innerText= Products[i].seller;
+
+                    seller.append(sellerimg,sellerName);
+                
+                title.innerText = Products[i].title;
+                productImage.setAttribute("src",Products[i].image);
+                
+                product.append(title,productImage,seller);
+            productContainer.append(product);
+        }
 
     //-------------------------------------------------------------
 
