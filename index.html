@@ -46,7 +46,7 @@
             padding-right: 25px;
         }
         #nav1>img{
-            width: 20%;
+            width: 15%;
         }
         #nav2{
             width: 20%;
@@ -64,15 +64,17 @@
             font-size: 12px;
         }
         #nav2>div:hover{
-            border: 1px solid white;
-            transition: all 0.5s;
+            transition: all 500ms;
+            background-color: rgb(236, 237, 255);
+            padding: 2px;
+            border-radius: 20px;
         }
         .subnav{
             background-color: red;
         }
         .subnav button{
             padding: 10px;
-            border: 0px solid;
+            border: 0px solid white;
             background-color: white;
             font-size: 16px;
             font-weight: bolder;
@@ -82,10 +84,13 @@
         }
         .subnav:hover .subnav-content{
             display: grid;
-            grid-template-columns: repeat(3,1fr);
-            gap: 10px;
-            position: absolute;
-            transition: all 2s;
+            transition: all 1000ms;
+            grid-template-columns: repeat(5,1fr);
+        }
+        .subnav>button:hover{
+            color: red;
+            border-bottom: 2px solid red;
+            transition: all 0.5s;
         }
         .subnav-content>a{
             text-decoration: none;
@@ -96,9 +101,23 @@
             border: 1px solid rgb(190, 187, 187);
             border-top: 0px;
             background-color: white;
-            margin-top: 14px;
-            float: left;
-            padding: 10px;
+            margin-top: 12px;
+            padding: 30px;
+            padding-top: 10px;
+            position: absolute;
+            left: 10%;;
+            width: 80%;
+            line-height: 23px;
+        }
+        .subnav-content a:hover{
+            border-bottom: 1px solid green;
+            background-color: aliceblue;
+        }
+        #category{
+            font-weight: bolder;
+            border-radius: 3px;
+            background-color: rgb(236, 236, 236);
+            padding: 2px 5px;
         }
         .second-section{
             width: 1200px;
@@ -197,62 +216,292 @@
 
     <div id="navbar">
         <div id="nav1">
-            <img src="./Landingpage/images/AppLogo.png" alt="">
+            <img src="./Landingpage/images/AppLogo2.png" alt="">
             
             <div class="subnav">
                 <button class="subnavbtn">WOMEN <i class="fa fa-caret-down"></i></button>
                 <div class="subnav-content">
-                    <a href="#">Ethnic Wear</a>
-                    <a href="#">Western Wear</a>
-                    <a href="#">Sports Wear and Active Wear</a>
-                    <a href="#">Jewellery</a>
-                    <a href="#">Brands</a>
-                    <a href="#">Belts and Watches</a>
-                    <a href="#">Bags and Wallets</a>
+                    <div>
+                        <a href="#" id="category">Ethnic Wear</a><br>
+                        <a href="#">Kurta Kurtis</a><br>
+                        <a href="#">Sarees</a><br>
+                        <a href="#">Ethnic Sets</a><br>
+                        <a href="#">Suits & Dress Materials</a><br>
+                        <a href="#">Lehengas</a><br>
+                        <a href="#">Blouses</a><br>
+                        <a href="#">Dupattas</a><br>
+                        <a href="#">Ethnic Dresses</a><br>
+                        <a href="#">Palazzos & Skirts</a><br>
+                        <a href="#">Leggings, Salwar & Churidaar</a><br>
+                        <a href="#">Shawls & Wraps</a><br>
+                        <a href="#">Ethnic Shrugs & Jackets</a><br>
+                        <a href="#">Cloaks & Abaya</a><br><br>
+                        <a href="#" id="category">Bags and Wallets</a><br>
+                    </div>
+                    <div>
+                        <a href="#" id="category">Western Wear</a><br>
+                        <a href="#">Tops</a><br>
+                        <a href="#">Dresses</a><br>
+                        <a href="#">Tees</a><br>
+                        <a href="#">Shirts</a><br>
+                        <a href="#">Tunics</a><br>
+                        <a href="#">Jumpsuits</a><br>
+                        <a href="#">Sets</a><br>
+                        <a href="#">Kaftans</a><br>
+                        <a href="#">Jeans & Jeggings</a><br>
+                        <a href="#">Trousers & Pants</a><br>
+                        <a href="#">Skirts & Shorts</a><br>
+                        <a href="#">Shrugs</a><br>
+                        <a href="#">Sweaters & Sweatshirts</a><br>
+                        <a href="#">Jackets & Blazers</a><br>
+                    </div>
+                    <div>
+                        <a href="#" id="category">Sports Wear and Active Wear</a><br>
+                        <a href="#">Swim Wear</a><br>
+                        <a href="#">Topwear</a><br>
+                        <a href="#">Bottomwear</a><br>
+                        <a href="#">Shoes</a><br><br>
+                        <a href="#" id="category">Lingerie and Sleepwear</a><br>
+                        <a href="#">Bra</a><br>
+                        <a href="#">Panties</a><br>
+                        <a href="#">Lingerie Sets</a><br>
+                        <a href="#">Sleepwear & Loungewear</a><br>
+                        <a href="#">Shape Wear</a><br>
+                        <a href="#">Camisoles & Thermals</a><br><br>
+                        <a href="#" id="category">Belts and Watches</a><br><br>
+                        <a href="#" id="category">Sunglasses and hats</a><br>
+                    </div>
+                    <div>
+                        <a href="#" id="category">Jewellery</a><br>
+                        <a href="#">Fashion Jewellery</a><br>
+                        <a href="#">Imitation Jewellery</a><br>
+                        <a href="#">Earrings</a><br>
+                        <a href="#">Necklace & Pendants</a><br>
+                        <a href="#">Rings, Bangles & Bracelets</a><br><br>
+                        <a href="#" id="category">Footwear</a><br>
+                        <a href="#">Flats</a><br>
+                        <a href="#">Heels</a><br>
+                        <a href="#">Casual Shoes</a><br>
+                        <a href="#">Flip Flops</a><br>
+                        <a href="#">Sport Shoes & Sneakers</a><br>
+                        <a href="#">Boots</a><br><br>
+                        <a href="#" id="category">Beauty and Personal care</a><br>
+                    </div>
+                    <div>
+                        <a href="#" id="category">Brands</a><br>
+                        <a href="#">W</a><br>
+                        <a href="#">Karigari</a><br>
+                        <a href="#">Aurelia</a><br>
+                        <a href="#">Alcis</a><br>
+                        <a href="#">Shaily</a><br>
+                        <a href="#">Cottinfab</a><br>
+                        <a href="#">Ksut</a><br>
+                        <a href="#">Oxolloxo</a><br>
+                        <a href="#">Trendif</a><br>
+                        <a href="#">Pluss</a><br>
+                    </div>
+                    
                 </div>
             </div>
 
             <div class="subnav">
-                <button class="subnavbtn">MEN <i class=""></i></button>
+                            <button class="subnavbtn">MEN <i class="fa fa-caret-down"></i></button>
+                            <div class="subnav-content">
+                                <div>
+                                    <a href="#" id="category">Top Wear</a><br>
+                                    <a href="#">T-Shirts</a><br>
+                                    <a href="#">Polo T Shirts</a><br>
+                                    <a href="#">Casual Shirts</a><br>
+                                    <a href="#">Formal Shirts</a><br>
+                                    <a href="#">Suits & Blazers</a><br>
+                                    <a href="#">Jackets</a><br>
+                                    <a href="#">Sweaters & Sweatshirts</a><br><br>
+
+                                    <a href="#" id="category">Bottom Wear</a><br>
+                                    <a href="#">Jeans</a><br>
+                                    <a href="#">Casual Trousers</a><br>
+                                    <a href="#">Formal Trousers</a><br>
+                                    <a href="#">Joggers</a><br>
+                                    <a href="#">Shorts</a><br><br>
+                                </div>
+                                <div>
+                                    <a href="#" id="category">Ethnic Wear</a><br>
+                                    <a href="#">Kurtas</a><br>
+                                    <a href="#">Ethnic Wear Sets</a><br>
+                                    <a href="#">Nehru Jackets</a><br>
+                                    <a href="#">Ethnic Bottom Wear</a><br><br>
+                                    
+                                    <a href="#" id="category">Sports Wear</a><br>
+                                    <a href="#">T-Shirts</a><br>
+                                    <a href="#">Shorts</a><br>
+                                    <a href="#">Track Pants</a><br>
+                                    <a href="#">Track Suits</a><br><br>
+                                    
+                                    <a href="#" id="category">Fragrances</a><br><br>
+                                </div>
+                                <div>
+                                    <a href="#" id="category">Footwear</a><br>
+                                    <a href="#">Casual Shoes</a><br>
+                                    <a href="#">Formal Shoes</a><br>
+                                    <a href="#">Sports Shoes</a><br>
+                                    <a href="#">Jutis And Mojaris</a><br>
+                                    <a href="#">Slippers & Sandals</a><br>
+                                    <a href="#">Socks</a><br><br>
+                                    
+                                    <a href="#" id="category">Belts, Bags & Wallets</a><br><br>
+                                    
+                                    <a href="#" id="category">Watches</a><br><br>
+                                    
+                                    <a href="#" id="category">Sunglasses & Frames</a><br><br>
+                                </div>
+                                <div>
+                                    <a href="#" id="category">Accessories</a><br>
+                                    <a href="#">Caps And Hats</a><br>
+                                    <a href="#">Lapel Pins & Brooch</a><br>
+                                    <a href="#">Ties & Pocket Squares</a><br>
+                                    <a href="#">Cufflinks & Bracelets</a><br>
+                                    <a href="#">Handkerchiefs</a><br>
+                                    <a href="#">Headphones & Speakers</a><br><br>
+                                    
+                                    <a href="#" id="category">Innerwear</a><br>
+                                    <a href="#">Briefs</a><br>
+                                    <a href="#">Boxers</a><br>
+                                    <a href="#">Vests</a><br><br>
+                                    
+                                    <a href="#" id="category">Personal Grooming</a><br><br>
+                                </div>
+                                <div>
+                                    <a href="#" id="category">Brands</a><br>
+                                    <a href="#">Arrow</a><br>
+                                    <a href="#">US Polo Assn</a><br>
+                                    <a href="#">Aeropostale</a><br>
+                                    <a href="#">Campus Sutra</a><br>
+                                    <a href="#">Ruggers</a><br>
+                                    <a href="#">Canary London</a><br>
+                                    <a href="#">Hang Up</a><br>
+                                    <a href="#">Alcis</a><br><br>
+                                </div>
+                        
+                            </div>
+            </div>
+
+            <div class="subnav">
+                <button class="subnavbtn">KIDS <i class="fa fa-caret-down"></i></button>
                 <div class="subnav-content">
-                    <a href="#">Top Wear</a>
-                    <a href="#">Bottom Wear</a>
-                    <a href="#">Footwear</a>
-                    <a href="#">Accessories</a>
-                    <a href="#">Brands</a>
-                    <a href="#">Bottom Wear</a>
-                    <a href="#">SPorts Wear</a>
+                    <div>
+                        <a href="#" id="category">Boys</a><br>
+                        <a href="#">T-Shirts</a><br>
+                        <a href="#">Shirts</a><br>
+                        <a href="#">Bottom Wear</a><br>
+                        <a href="#">Ethnic Wear</a><br>
+                        <a href="#">Sweater & Cardigans</a><br>
+                        <a href="#">Coats & Jackets</a><br>
+                        <a href="#">Innerwear & Nightwear</a><br>
+                        <a href="#">Twin Sets & Dungrees</a><br>
+                        
+                        <a href="#" id="category">Shop By Age Boys</a><br>
+                        <a href="#">0-2 Years</a><br>
+                        <a href="#">2-6 Years</a><br>
+                        <a href="#">6-12 Years</a><br>
+                        <a href="#">12-16 Years</a><br>
+
+                    </div>
+                    <div>
+                        <a href="#" id="category">Girls</a><br>
+                        <a href="#">Dresses & Frocks</a><br>
+                        <a href="#">Tees & Tops</a><br>
+                        <a href="#">Bottom Wear</a><br>
+                        <a href="#">Ethnic Wear</a><br>
+                        <a href="#">Sweater & Cardigans</a><br>
+                        <a href="#">Coats & Jackets</a><br>
+                        <a href="#">Twin Sets & Jump Suits</a><br>
+                        <a href="#">Innerwear & Nightwear</a><br>
+                        
+                        <a href="#" id="category">Shop By Age Girls</a><br>
+                        <a href="#">0-2 Years</a><br>
+                        <a href="#">2-6 Years</a><br>
+                        <a href="#">6-12 Years</a><br>
+                        <a href="#">12-16 Years</a><br>
+
+                    </div>
+                    <div>
+                        <a href="#" id="category">Footwear</a><br>
+                        <a href="#">Sandals & Floaters</a><br>
+                        <a href="#">Slippers & Flip Flops</a><br>
+                        <a href="#">Casual Shoes</a><br>
+                        <a href="#">Sports Shoes</a><br>
+                        <a href="#">Formal Shoes</a><br>
+                    </div>
+                    <div>
+                        <a href="#" id="category">Accessories</a><br>
+                        
+                        <a href="#" id="category">Bed & Bath</a><br>
+                    </div>
+                    <div>
+                        <a href="#" id="category">Brands</a><br>
+                        <a href="#">Giny & Jony</a><br>
+                        <a href="#">US Polo Assn Kids</a><br>
+                        <a href="#">Monte Carlo</a><br>
+                        <a href="#">Cherokee</a><br>
+                        <a href="#">Li'l Tomatoes</a><br>
+                        <a href="#">NeuVin</a><br>
+                        <a href="#">Under Fourteen Only</a><br>
+                        <a href="#">Tales & Stories</a><br>
+                        <a href="#">Beebay</a><br>
+
+                    </div>
+            
                 </div>
             </div>
 
             <div class="subnav">
-                <button class="subnavbtn">KIDS <i class=""></i></button>
+                <button class="subnavbtn">HOME <i class="fa fa-caret-down"></i></button>
                 <div class="subnav-content">
-                    <a href="#">Boys</a>
-                    <a href="#">Girls</a>
-                    <a href="#">Footwear</a>
-                    <a href="#">Brands</a>
-                    <a href="#">Accessories</a>
-                    <a href="#">Shop by Age</a>
-                    <a href="#"></a>
+                    <div>
+                        <a href="#" id="category">Bed Linen & Furnishing</a><br>
+                        <a href="#">Bed Sheet Sets</a><br>
+                        <a href="#">Quilts & Comforters</a><br>
+                        <a href="#">Blankets</a><br>
+                        <a href="#">Bed Covers</a><br>
+                        <a href="#">Pillow Covers</a><br>
+                        <a href="#">Curtains</a><br>
+            
+                    </div>
+                    <div>
+                        <a href="#" id="category">Bath</a><br>
+                        <a href="#">Towels</a><br>
+                        <a href="#">Bath Mats</a><br>
+                        <a href="#">Shower Curtains</a><br>
+            
+                    </div>
+                    <div>
+                        <a href="#" id="category">Furniture</a><br>
+                        
+                        <a href="#" id="category">Decor</a><br>
+            
+                    </div>
+                    <div>
+                        <a href="#" id="category">Household Accessories</a><br>
+                        
+                        <a href="#" id="category">Kitchen</a><br>
+
+            
+                    </div>
+                    <div>
+                        <a href="#" id="category">Brands</a><br>
+                        <a href="#">Bella Casa</a><br>
+                        <a href="#">Cortina</a><br>
+                        <a href="#">Bianca</a><br>
+                        <a href="#">Jeby</a><br>
+                        <a href="#">Saral Home</a><br>
+            
+                    </div>
+            
                 </div>
             </div>
 
             <div class="subnav">
-                <button class="subnavbtn">HOME <i class=""></i></button>
-                <div class="subnav-content">
-                    <a href="#">Bed linen and Furnishing</a>
-                    <a href="#">Bath</a>
-                    <a href="#">Decor</a>
-                    <a href="#">Brands</a>
-                    <a href="#">Household Accessories</a>
-                    <a href="#"></a>
-                    <a href="#"></a>
-                </div>
-            </div>
-
-            <div class="subnav">
-                <button class="subnavbtn">OFFERS <i class=""></i></button>
+                <button class="subnavbtn">OFFERS</button>
             </div>
 
         </div>
