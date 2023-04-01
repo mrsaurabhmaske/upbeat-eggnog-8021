@@ -1,0 +1,420 @@
+* {
+    box-sizing: border-box;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+body {
+    margin: 0px;
+    padding: 0px;
+    background-color:rgb(214, 214, 214);
+}
+
+.searchbar {
+    display: none;
+    align-items: center;
+    font-size: 15px;
+    position: absolute;
+
+}
+
+.searchbar>div {
+    width: 5%;
+    text-align: center;
+    background-color: greenyellow;
+    padding: 13px;
+    height: 70px;;
+}
+
+.searchbar input {
+    width: 90%;
+    height: 70px;
+    font-size: 20px;
+}
+
+#navbar {
+    box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+    display: flex;
+    justify-content: space-between;
+    background-color: white;
+    border-bottom: 1px solid rgb(190, 187, 187);
+    height: 70px;
+    position: sticky;
+    top: 0;
+}
+
+#nav1 {
+    height: 70px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding-left: 25px;
+    padding-right: 25px;
+}
+
+#nav1>a {
+    width: 15%;
+}
+
+#nav1>a>img {
+    width: 100%;
+}
+
+#nav2 {
+    width: 20%;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 15px;
+    text-align: center;
+    align-items: center;
+    padding: 15px;
+}
+
+#nav2 img {
+    width: 20%;
+}
+
+#nav2>div {
+    font-size: 12px;
+}
+
+#nav2>div:hover {
+    transition: all 500ms;
+    background-color: rgb(236, 237, 255);
+    padding: 2px;
+    border-radius: 20px;
+}
+
+.subnav {
+    background-color: red;
+}
+
+.subnav button {
+    padding: 10px;
+    border: 0px solid white;
+    background-color: white;
+    font-size: 16px;
+    font-weight: bolder;
+}
+
+.subnav button:last-child {
+    color: red;
+}
+
+.subnav:hover .subnav-content {
+    display: grid;
+    transition: all 1000ms;
+    grid-template-columns: repeat(5, 1fr);
+}
+
+.subnav>button:hover {
+    color: red;
+    border-bottom: 2px solid red;
+}
+
+.subnav-content>a {
+    text-decoration: none;
+    color: black;
+}
+
+.subnav-content {
+    display: none;
+    border: 1px solid rgb(190, 187, 187);
+    border-top: 0px;
+    background-color: white;
+    margin-top: 12px;
+    padding: 30px;
+    padding-top: 10px;
+    position: absolute;
+    left: 15%;
+    width: 70%;
+    line-height: 23px;
+}
+
+.subnav-content a:hover {
+    font-weight: bolder;
+    border-bottom: 1px solid green;
+    background-color: aliceblue;
+    color: red;
+}
+
+#category {
+    font-weight: bolder;
+    border-radius: 3px;
+    background-color: rgb(236, 236, 236);
+    padding: 2px 5px;
+}
+
+.second-section {
+    width: 1200px;
+    margin: auto;
+}
+
+.toggle {
+    margin-top: 5px;
+    margin-bottom: 20px;
+    margin-left: 100px;
+    padding-left: 20px;
+}
+
+.toggle>button {
+    background-color: transparent;
+    border: 0px solid;
+}
+
+a {
+    text-decoration: none;
+    color: black;
+}
+
+.second-navbar {
+    display: flex;
+    text-align: center;
+    font-size: 12px
+}
+
+.second-navbar>div>img {
+    width: 70%;
+}
+
+.discountBanner {
+    width: 1000px;
+    margin: auto;
+    display: flex;
+    align-items: center;
+    background-color: rgb(231, 199, 231);
+    padding: 10px;
+    margin-top: 25px;
+}
+
+.discountBanner>img {
+    width: 50px;
+    margin-right: 10px;
+    ;
+}
+
+.slideShow {
+    width: 1000px;
+    margin: auto;
+    display: flex;
+    background-color: green;
+}
+
+.slideShow img {
+    width: 50%;
+}
+
+.products {
+    width: 1000px;
+    margin: auto;
+    margin-top: 10px;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 15px;
+}
+
+.products>div {
+    background-color: white;
+    padding: 5px;
+    box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+    border-radius: 3px;
+}
+
+.products>div>h3 {
+    font-weight: normal;
+}
+
+.products>div>img {
+    width: 100%;
+}
+
+.products>div>div {
+    display: flex;
+    align-items: center;
+    padding-left: 10px;
+}
+
+.products>div>div>img {
+    width: 30px;
+    height: 30px;
+    border-radius: 20px;
+}
+
+.products>div>div>p {
+    padding-left: 10px;
+}
+
+.main {
+    display: flex;
+}
+
+.leftbar {
+    padding: 10px;
+    text-align: center;
+    font-weight: bolder;
+    position: fixed;
+    top: 70px;
+}
+
+.details {
+    width: 250px;
+    height: 90px;
+    background-color: white;
+    box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+    padding: 10px;
+}
+
+.details>span {
+    background-color: rgb(235, 209, 209);
+    border-radius: 5px;
+    padding: 3px;
+}
+
+.filterAndSort {
+    width: 250px;
+    height: 700px;
+    margin-top: 10px;
+    background-color: white;
+    box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+    padding: 10px;
+
+}
+
+.filterAndSort select {
+    width: 100%;
+    height: 30px;
+    text-align: center;
+    border-radius: 20px;
+}
+
+option {
+    background-color: rgb(217, 245, 217);
+}
+
+#allProducts {
+    width: 50%;
+    margin: auto;
+    padding: 20px;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 10px
+}
+
+#allProducts>div {
+    background-color: rgb(243, 243, 243);
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    padding-bottom: 10px;
+    text-align: center;
+}
+
+#allProducts>div>h3 {
+    padding: 0px;
+}
+
+#allProducts img {
+    width: 100%;
+}
+
+#allProducts>div>div {
+    padding: 0px 20px;
+}
+
+#allProducts>div p {
+    margin-left: 5px;
+}
+
+#allProducts>div p:nth-child(1) {
+    color: rgb(41, 41, 109);
+    font-size: 17px;
+}
+
+#allProducts>div p:nth-child(2) {
+    color: rgb(163, 154, 154);
+    text-decoration: line-through;
+}
+
+#allProducts>div p:nth-child(3) {
+    color: green;
+}
+
+#allProducts>div>div:last-child {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: rgb(163, 154, 154);
+}
+
+#allProducts>div>div:last-child button {
+    margin-left: 10px;
+    width: 50px;
+    height: 25px;
+    border-radius: 50px;
+    border: 0px solid;
+    color: white;
+    background-color: red;
+    font-weight: bolder;
+}
+#allProducts>div>div:last-child button:first-child {
+    background-color: rgb(97, 194, 97);
+}
+#allProducts>div>div:last-child button:first-child:hover {
+    background-color: transparent;
+    color: transparent;
+    transition: ease-out 300ms;
+}
+#allProducts>div>div:last-child button:last-child:hover {
+        background-color: white;
+         transition: all 700ms;
+        border: 2px solid red;
+        color: red;
+
+}
+
+x {
+    color: rgb(71, 38, 38);
+    padding: 0px 20px;
+    background-color: rgb(236, 236, 236);
+    border-radius: 20px;
+}
+.theCart{
+    width:60%;
+    margin:auto;
+    margin-top: 30px;
+    display: flex;
+}
+.cartItems{
+    background-color: rgb(232, 233, 187);
+    width:50%;
+    padding:20px;
+}
+.cartItems>div{
+    background-color: white;
+    margin-bottom: 20px;
+    display: flex;
+    justify-content: space-between;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}
+.cartItems>div>img{
+    width:150px;
+}
+.cartItems>div>div {
+    padding: 10px;
+}
+.cartItems>div>div:last-child p:nth-child(1) {
+    font-size: 20px;
+    font-weight: bolder;
+    color: rgb(20, 20, 75);
+}
+.cartItems>div>div:last-child p:nth-child(2) {
+    text-decoration: line-through;
+    color: rgb(148, 151, 155);
+}
+.summary{
+    background-color: white;
+    width: 20%;
+    height: 500px;
+    text-align: center;
+    position: fixed;
+    left: 60%;
+    top: 200px;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}
