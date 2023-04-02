@@ -320,7 +320,7 @@
     
             <div><img src="./Landingpage/images/pencil.png" alt=""><br>SCRAPBOOK</div>
             <div><img src="./Landingpage/images/search.png" alt=""><br>SEARCH</div>
-            <div><a href="theCart.html"><img src="./Landingpage/images/shopping-cart.png" alt=""></a><br>CART</div>
+            <div><a href="theCart.html"><img src="./Landingpage/images/shopping-cart.png" alt=""></a><br>CART <span></span></div>
             <div><img src="./Landingpage/images/user.png" alt=""><br>PROFILE</div>
     
         </div>
@@ -374,6 +374,16 @@
 
     <div class="products"><!-- Products will be pushed here--></div>
 
+    <!-- -------------------------------------------------- -->
+
+    <!-- -------------Footer------------------------------- -->
+    <div class="footer">
+        <div class="footerDetails">
+            <p>APPARELS.CO</p>
+            <p>Website by : <span>Saurabh Maske</span></p>
+        </div>
+        <img src="./Landingpage/images/Profile Photo.jpeg" alt="">
+    </div>
     <!-- -------------------------------------------------- -->
 </body>
 </html>
@@ -538,6 +548,18 @@
                 productContainer.append(product);
             }
 
+    //-------------------------------------------------------------
+
+    let LSData = localStorage.getItem("cartData");
+        LSData = JSON.parse(LSData) || [];
+
+        //------Cart Count---------------------------------------------
+            displayCartCount();
+
+            function displayCartCount() {
+                let cartCount = document.querySelector("#nav2>div:nth-child(3) span");
+                cartCount.innerText = "( " + LSData.length + " )";
+            }
     //-------------------------------------------------------------
 
     </script>

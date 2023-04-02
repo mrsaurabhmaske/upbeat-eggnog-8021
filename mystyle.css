@@ -1,6 +1,7 @@
 * {
     box-sizing: border-box;
     font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    transition: all 1000ms;
 }
 
 body {
@@ -13,7 +14,8 @@ body {
     display: none;
     align-items: center;
     font-size: 15px;
-    position: absolute;
+    position: fixed;
+    top:0;
 
 }
 
@@ -32,6 +34,7 @@ body {
 }
 
 #navbar {
+    width:100%;
     box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
     display: flex;
     justify-content: space-between;
@@ -70,7 +73,7 @@ body {
 }
 
 #nav2 img {
-    width: 20%;
+    width: 20px;
 }
 
 #nav2>div {
@@ -100,15 +103,17 @@ body {
     color: red;
 }
 
-.subnav:hover .subnav-content {
-    display: grid;
-    transition: all 1000ms;
-    grid-template-columns: repeat(5, 1fr);
-}
-
 .subnav>button:hover {
     color: red;
     border-bottom: 2px solid red;
+}
+
+.subnav-content a:hover {
+    font-weight: bolder;
+    border-bottom: 1px solid green;
+    background-color: aliceblue;
+    color: red;
+    
 }
 
 .subnav-content>a {
@@ -121,20 +126,18 @@ body {
     border: 1px solid rgb(190, 187, 187);
     border-top: 0px;
     background-color: white;
-    margin-top: 12px;
+    margin-top: 13px;
     padding: 30px;
     padding-top: 10px;
     position: absolute;
-    left: 15%;
+    left: 270px;
     width: 70%;
     line-height: 23px;
 }
 
-.subnav-content a:hover {
-    font-weight: bolder;
-    border-bottom: 1px solid green;
-    background-color: aliceblue;
-    color: red;
+.subnav:hover .subnav-content {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
 }
 
 #category {
@@ -145,7 +148,7 @@ body {
 }
 
 .second-section {
-    width: 1200px;
+    width: 70%;
     margin: auto;
 }
 
@@ -169,15 +172,23 @@ a {
 .second-navbar {
     display: flex;
     text-align: center;
-    font-size: 12px
+    font-size: 80%;
+}
+.second-navbar>div {
+    width: 10%;;
 }
 
 .second-navbar>div>img {
     width: 70%;
 }
+.second-navbar>div>img:hover {
+    border-radius: 50px;
+    border: 3px solid rgb(124, 168, 59);
+    transition: all 1s;
+}
 
 .discountBanner {
-    width: 1000px;
+    width: 60%;
     margin: auto;
     display: flex;
     align-items: center;
@@ -189,22 +200,22 @@ a {
 .discountBanner>img {
     width: 50px;
     margin-right: 10px;
-    ;
 }
 
 .slideShow {
-    width: 1000px;
+    width: 60%;
     margin: auto;
-    display: flex;
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
     background-color: green;
 }
 
 .slideShow img {
-    width: 50%;
+    width: 100%;
 }
 
 .products {
-    width: 1000px;
+    width: 60%;
     margin: auto;
     margin-top: 10px;
     display: grid;
@@ -217,6 +228,11 @@ a {
     padding: 5px;
     box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
     border-radius: 3px;
+}
+.products>div:hover {
+    background-color: rgb(243, 242, 227);
+    padding: 18px;
+    transition: all 1s;
 }
 
 .products>div>h3 {
@@ -248,6 +264,7 @@ a {
 }
 
 .leftbar {
+    width: 250px;
     padding: 10px;
     text-align: center;
     font-weight: bolder;
@@ -256,7 +273,7 @@ a {
 }
 
 .details {
-    width: 250px;
+    width: 100%;
     height: 90px;
     background-color: white;
     box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
@@ -270,13 +287,12 @@ a {
 }
 
 .filterAndSort {
-    width: 250px;
-    height: 700px;
-    margin-top: 10px;
+    width: 100%;
+    height: 500px;
+    margin-top: 5px;
     background-color: white;
     box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
     padding: 10px;
-
 }
 
 .filterAndSort select {
@@ -296,7 +312,8 @@ option {
     padding: 20px;
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    gap: 10px
+    gap: 10px;
+    margin-bottom: 200px;
 }
 
 #allProducts>div {
@@ -304,6 +321,11 @@ option {
     box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
     padding-bottom: 10px;
     text-align: center;
+}
+#allProducts>div:hover {
+    background-color: rgb(241, 233, 233);
+    padding: 5px;
+    transition: all 0.5s;
 }
 
 #allProducts>div>h3 {
@@ -363,7 +385,7 @@ option {
 }
 #allProducts>div>div:last-child button:last-child:hover {
         background-color: white;
-         transition: all 700ms;
+        transition: all 700ms;
         border: 2px solid red;
         color: red;
 
@@ -376,15 +398,15 @@ x {
     border-radius: 20px;
 }
 .theCart{
-    width:60%;
+    width:50%;
     margin:auto;
     margin-top: 30px;
     display: flex;
 }
 .cartItems{
-    background-color: rgb(232, 233, 187);
-    width:50%;
+    width:70%;
     padding:20px;
+    margin-bottom: 50px;
 }
 .cartItems>div{
     background-color: white;
@@ -392,9 +414,11 @@ x {
     display: flex;
     justify-content: space-between;
     box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    border-radius: 3px;
 }
 .cartItems>div>img{
     width:150px;
+    border-radius: 3px;
 }
 .cartItems>div>div {
     padding: 10px;
@@ -408,6 +432,21 @@ x {
     text-decoration: line-through;
     color: rgb(148, 151, 155);
 }
+.cartItems button{
+    background-color: rgb(230, 73, 73);
+    color: white;
+    border: 0px;
+    border-radius: 10px;
+    padding: 10px;
+    font-weight: bold;
+    font-size: 10px;
+}
+.cartItems button:hover {
+    background-color: rgb(224, 224, 224);
+    color: rgb(122, 122, 122);
+    padding-left: 30px;
+    transition: all 700ms;
+}
 .summary{
     background-color: white;
     width: 20%;
@@ -415,6 +454,229 @@ x {
     text-align: center;
     position: fixed;
     left: 60%;
-    top: 200px;
+    top: 120px;
     box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}
+.summary>p:nth-child(4){
+    font-size: 25px;
+    color: red;
+}
+.summary button {
+    width: 80%;
+    padding: 15px;
+    margin-top: 20px;
+    font-size: 20px;
+    color: white;
+    background-color: red;
+    border: 1px solid white;
+    border-radius: 10px;
+    font-weight: bolder;
+}
+.summary button:hover {
+    font-size: 25px;
+    padding: 12px;
+    transition: all 1s;
+}
+.summary span{
+    font-weight: bolder;
+}
+
+.footer{
+    background-color: rgb(240, 240, 240);
+    display:flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 60px;
+    margin-top: 20px;
+    width: 100%;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px, rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;
+}
+.footer>div{
+    width: 90%;
+    font-size: 20px;
+    text-align: center;
+    color: rgb(128, 125, 125);
+    line-height: 10px;
+    display:flex;
+    justify-content: space-between;
+}
+.footer>div span{
+    padding: 3px;
+    border-radius: 10px;
+    font-weight: bolder;
+}
+.footer>img{
+    width: 80px;
+    border-radius: 50px;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
+    position: fixed;
+    bottom: 20px;
+    right: 50px;
+}
+.footer>img:hover{
+    width: 150px;
+    border-radius: 100px;
+    transition: all .5s;
+}
+
+
+@media only screen and (max-width:1200px) {
+    .products {
+        width: 80%;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 20px;
+        }
+        #navbar {
+            width: 100%;
+            display: grid;
+            height: 150px;
+            text-align: center;
+        }
+        #nav2{
+            margin: auto;
+        }
+        .discountBanner {
+            width: 80%;
+        }
+        .slideShow {
+            width: 80%;
+            display: grid;
+            grid-template-columns: repeat(2,1fr);
+        }
+        #allProducts {
+            width: 50%;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 10px
+        }
+        .footer>img {
+            width: 60px;
+            right: 10px;
+        }
+        .cartItems>div>img {
+            width: 100px;
+        }
+        .theCart {
+            font-size: 10px;
+        }
+        .second-navbar {
+            font-size: 60%;
+        }
+        .summary {
+            height: 400px;
+            top:200px;
+        }
+        .leftbar {
+            font-size: 13px;
+            top: 140px;
+            width:200px
+        }
+        .subnav-content {
+            display: none;
+            left: 200px;
+            width: 60%;
+
+        }
+        .subnav:hover .subnav-content {
+            display: grid;
+            margin-top: 92px;
+            grid-template-columns: repeat(4, 1fr);
+        }
+}
+
+@media only screen and (max-width:800px) {
+    .products {
+            width: 90%;
+            grid-template-columns: repeat(1, 1fr);
+            gap: 20px;
+        }
+        .discountBanner {
+            width: 90%;
+        }
+        .slideShow {
+            width: 90%;
+            display: grid;
+            grid-template-columns: repeat(1,1fr);
+        }
+        #allProducts {
+            width: 50%;
+            grid-template-columns: repeat(1, 1fr);
+            gap: 10px
+        }
+    
+        .leftbar {
+            font-size: 10px;
+            top: 140px;
+            width: 150px
+        }
+        .footer>img {
+            width: 50px;
+            right: 5px;
+        }
+    
+        .cartItems>div>img {
+            width: 100px;
+        }
+    
+        .theCart {
+            font-size: 7px;
+        }
+
+        .second-navbar {
+            font-size: 40%;
+        }
+        .footer>div {
+            display: block;
+        }
+        .cartItems>div {
+            display: block;
+        }
+        .summary>p:nth-child(4) {
+            font-size: 15px;
+            color: red;
+        }
+        .summary {
+            height: 300px;
+        }
+        #navbar {
+            width: 100%;
+            display: block;
+            text-align: center;
+        }
+        #nav2{
+            position: absolute;
+            top: 70px;
+            left: 100px;
+        }
+        .leftbar {
+            font-size: 13px;
+            top:140px;
+        }
+        .summary{
+            top: 200px;
+        }
+        .subnav-content {
+            display: none;
+            left: 150px;
+            width: 60%;
+        }
+    
+        .subnav:hover .subnav-content {
+            margin-top: 92px;
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+        }
+}
+
+@media only screen and (max-width:495px) {
+    .leftbar{
+        display: none;
+    }
+    #allProducts {
+        width: 80%;
+    }
+.subnav:hover .subnav-content {
+    margin-top: 92px;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+}
 }

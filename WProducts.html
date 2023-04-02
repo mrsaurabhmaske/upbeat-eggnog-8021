@@ -313,7 +313,7 @@
     
             <div><img src="./Landingpage/images/pencil.png" alt=""><br>SCRAPBOOK</div>
             <div><img src="./Landingpage/images/search.png" alt=""><br>SEARCH</div>
-            <div><a href="theCart.html"><img src="./Landingpage/images/shopping-cart.png" alt=""></a><br>CART</div>
+            <div><a href="theCart.html"><img src="./Landingpage/images/shopping-cart.png" alt=""></a><br>CART <span></span></div>
             <div><img src="./Landingpage/images/user.png" alt=""><br>PROFILE</div>
     
         </div>
@@ -366,7 +366,7 @@
             <option value="XYXX">XYXX</option>
             <option value="Fashion">Fashion</option>
             <option value="JOMPERS">JOMPERS</option>
-            <option value="Austin Wood">Austin Wood</option>
+            <option value="Austin">Austin</option>
         </select><br><br>
 
         Category<br><select name="categoryFilter" id="categoryFilter">
@@ -383,6 +383,16 @@
     </div>
     <div id="allProducts"></div>
     </div>
+
+    <!-- -------------Footer------------------------------- -->
+    <div class="footer">
+        <div class="footerDetails">
+            <p>APPARELS.CO</p>
+            <p>Website by : <span>Saurabh Maske</span></p>
+        </div>
+        <img src="./Landingpage/images/Profile Photo.jpeg" alt="">
+    </div>
+    <!-- -------------------------------------------------- -->
 </body>
 </html>  
 <script>
@@ -553,7 +563,7 @@ let MProducts =[
         MRP: 999,
         discount: 45,
         category: "Sports Wear",
-        brand: "Austin Wood",
+        brand: "Austin",
         size: "S",
         image: "https://img3.junaroad.com/uiproducts/17408551/zoom_0-1605787344.jpg"
     },
@@ -608,7 +618,7 @@ let MProducts =[
         MRP: 2499,
         discount: 40,
         category: "Top Wear",
-        brand: "Austin Wood",
+        brand: "Austin",
         size: "XL",
         image: "https://img3.junaroad.com/uiproducts/19481942/zoom_0-1678107652.jpg"
     },
@@ -630,7 +640,7 @@ let MProducts =[
         MRP: 1999,
         discount: 65,
         category: "Top Wear",
-        brand: "Austin Wood",
+        brand: "Austin",
         size: "M",
         image: "https://img3.junaroad.com/uiproducts/17015270/zoom_0-1584800728.jpg"
     },
@@ -686,6 +696,7 @@ let MProducts =[
     function Display(data){
         detailsCount.innerText = data.length;
         products.innerHTML=null;
+        
     for (let i = 0; i < data.length; i++) {
             let product = document.createElement("div");
             let img = document.createElement("img");
@@ -721,6 +732,7 @@ let MProducts =[
                 LSData.push(data[i]);
             }
             localStorage.setItem("cartData", JSON.stringify(LSData));
+            displayCartCount();
         })
          //------------------------------>
 
@@ -863,8 +875,16 @@ let MProducts =[
             Display(filtered);
         })
 
-
     //--------------------------------------------------->
+
+    //------Cart Count---------------------------------------------
+        displayCartCount();
+
+        function displayCartCount() {
+            let cartCount = document.querySelector("#nav2>div:nth-child(3) span");
+            cartCount.innerText = "( " + LSData.length + " )";
+        }
+    //-------------------------------------------------------------
 
 
 </script>
