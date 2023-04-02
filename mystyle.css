@@ -10,29 +10,6 @@ body {
     background-color:rgb(214, 214, 214);
 }
 
-.searchbar {
-    display: none;
-    align-items: center;
-    font-size: 15px;
-    position: fixed;
-    top:0;
-
-}
-
-.searchbar>div {
-    width: 5%;
-    text-align: center;
-    background-color: greenyellow;
-    padding: 13px;
-    height: 70px;;
-}
-
-.searchbar input {
-    width: 90%;
-    height: 70px;
-    font-size: 20px;
-}
-
 #navbar {
     width:100%;
     box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;

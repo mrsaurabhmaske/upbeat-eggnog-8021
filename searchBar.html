@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Search</title>
+    <style>
+    *{
+        box-sizing: border-box;
+        transition: all 2s;
+    }
+    body{
+        background-color: rgb(153, 153, 153);
+        margin: 0px;
+        padding: 0px;
+    }
+    .searchbar {
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        font-size: 15px;
+        background-color: white;
+        padding: 5px;
+        box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+        border-bottom: 1px solid rgb(190, 187, 187);
+    }
+    .searchbar img {
+        width: 60px;
+        text-align: center;
+        padding: 13px;
+        height: 60px;
+        cursor:pointer;
+        border-radius: 30px;
+        background-color: rgb(243, 243, 243);
+    }
+
+    #goBack:hover {
+        background-color: red;
+        margin-right: 30px;
+        margin-left: 20px;
+        transition: all 500ms;  
+    }
+    #doSearch:hover {
+        background-color: greenyellow;
+        margin-right: 20px;
+        margin-left: 30px;
+        transition: all 500ms;
+    }
+    .searchbar input {
+        width: 90%;
+        font-size: 20px;
+        height: 50px;
+        border: none;
+        padding: 20px;
+        border-radius: 30px;
+        background-color: rgb(243, 243, 243);
+        border: none;
+        color: black;
+    }
+    a{
+        height: 60px;
+    }
+
+
+    @media only screen and (max-width:1200px) {
+        .searchbar{
+            height: 150px;
+        }
+    }
+
+    </style>
+</head>
+<body>
+    <div class="searchbar">
+        <a href="./index.html"><img src="./Landingpage/images/cross.png" alt="" id="goBack"></a>
+        <input type="text" placeholder="Enter keywords to Search">
+        <img src="./Landingpage/images/search.png" alt="" id="doSearch">
+    
+    </div>
+    
+</body>
+</html>
