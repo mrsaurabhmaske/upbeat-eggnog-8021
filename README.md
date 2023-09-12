@@ -7,7 +7,7 @@ An E-Commerce website (clone of Limeroad.com) where end users can shop for Every
 ### Deployed Link
 
 <div align="center">
-  <a href="https://apparelsco-by-saurabh.netlify.app/" target="blank">Visit Apparels.co</a>
+  <a href="https://apparelsco-by-saurabh.netlify.app/" _target="blank">Visit Apparels.co</a>
 </div>
 
 ## Technologies Used
