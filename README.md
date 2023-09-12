@@ -1,7 +1,7 @@
 # Apparels.co - Shop for your favoutire Fashion!
 
 <div align="center">
-  <img src="./src/Images/logox.png" alt="Apparels.co Logo">
+![image](https://github.com/mrsaurabhmaske/upbeat-eggnog-8021/assets/123891687/c27fb357-0a34-4568-b13c-3e475dd40503)
 </div>
 
 An E-Commerce website (clone of Limeroad.com) where end users can shop for Everything Fasion!
@@ -9,7 +9,7 @@ An E-Commerce website (clone of Limeroad.com) where end users can shop for Every
 ### Deployed Link
 
 <div align="center">
-  <a href="https://medishine.vercel.app">Visit Apparels.co</a>
+  <a href="[https://medishine.vercel.app](https://apparelsco-by-saurabh.netlify.app/)">Visit Apparels.co</a>
 </div>
 
 ## Technologies Used
