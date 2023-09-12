@@ -1,7 +1,7 @@
 # Apparels.co - Shop for your favoutire Fashion!
 
 <div align="center">
-![image](https://github.com/mrsaurabhmaske/upbeat-eggnog-8021/assets/123891687/c27fb357-0a34-4568-b13c-3e475dd40503)
+[image](https://github.com/mrsaurabhmaske/upbeat-eggnog-8021/assets/123891687/c27fb357-0a34-4568-b13c-3e475dd40503)
 </div>
 
 An E-Commerce website (clone of Limeroad.com) where end users can shop for Everything Fasion!
